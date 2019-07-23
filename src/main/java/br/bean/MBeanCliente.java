@@ -22,7 +22,7 @@ public class MBeanCliente {
     
     
     public MBeanCliente() {
-        clientes = ListaCliente.getListaClientes();
+        //clientes = new ListaCliente().getListaClientes() ;
         //cidades = new RestCidade().get(responseType, id);
     }
     
