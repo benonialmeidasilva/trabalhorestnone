@@ -20,7 +20,6 @@ public class MBeanCliente {
     private ArrayList<Cidade> cidades;
     
     
-    
     public MBeanCliente() {
         //clientes = new ListaCliente().getListaClientes() ;
         //cidades = new RestCidade().get(responseType, id);
