@@ -4,6 +4,7 @@ import br.model.Cidade;
 import br.model.Cliente;
 import br.restClientes.RestCidade;
 import crud.ListaCliente;
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.inject.Named;
 import javax.faces.view.ViewScoped;
@@ -14,7 +15,7 @@ import javax.faces.view.ViewScoped;
  */
 @Named(value = "mBeanCliente")
 @ViewScoped
-public class MBeanCliente {
+public class MBeanCliente implements Serializable{
     
     private ArrayList<Cliente> clientes;
     private ArrayList<Cidade> cidades;

@@ -5,6 +5,7 @@ import crud.ListaCliente;
 import java.io.IOException;
 import java.util.ArrayList;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.Serializable;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -23,7 +24,7 @@ import javax.ws.rs.core.MediaType;
  * @author Benoni
  */
 @Path("restClientes")
-public class RestClientesResource {
+public class RestClientesResource implements Serializable{
 
     @Context
     private UriInfo context;

@@ -5,6 +5,7 @@
  */
 package br.restClientes;
 
+import java.io.Serializable;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
@@ -21,7 +22,7 @@ import javax.ws.rs.client.WebTarget;
  *
  * @author Benoni
  */
-public class RestCidade {
+public class RestCidade implements Serializable{
 
     private WebTarget webTarget;
     private Client client;

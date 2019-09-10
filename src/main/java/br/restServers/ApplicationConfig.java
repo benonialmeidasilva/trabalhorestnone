@@ -5,6 +5,7 @@
  */
 package br.restServers;
 
+import java.io.Serializable;
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
@@ -13,7 +14,7 @@ import javax.ws.rs.core.Application;
  * @author Benoni
  */
 @javax.ws.rs.ApplicationPath("webresources")
-public class ApplicationConfig extends Application {
+public class ApplicationConfig extends Application implements Serializable{
 
     @Override
     public Set<Class<?>> getClasses() {
