@@ -72,6 +72,6 @@ public class RestClientesResource implements Serializable{
     @Path("/{id}")
     public void delete(@PathParam("id") int codigo) {
         ListaCliente clientes = new ListaCliente();
-        clientes.removerCliente(clientes.getClientePorCodigo(codigo));
+        clientes.removerCliente(codigo);
     }
 }

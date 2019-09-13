@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Cadastro de Clientes
+        <h:form>
+            Codigo: 
+            <h:inputText value="#{mBeanCliente.codCli}"/>
+            nome:
+            <h:inputText value="#{mBeanCliente.nomeCli}"/>
+            Cidade:
+            <h:selectOneMenu value="#{mBeanCliente.codCidade}">
+                <f:selectItems value="#{mBeanCliente.cidades}" var="cid" itemValue="#{cid.codigo}"
+                               itemLabel="#{cid.nome}"></f:selectItems>
+            </h:selectOneMenu>
+            <h:commandButton action="#{mBeanCliente.salvar()}" value="Salvar" />
+        </h:form>
+        <hr/>
+        <h:form>
+            <h:dataTable value="#{mBeanCliente.clientes}" var="cliente">
+                <h:column>
+                    <h:outputText value="#{cliente.codigo}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{cliente.nome}"/>
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{cliente.cidade.nome}"/>
+                </h:column>
+                <h:column>
+                    <h:commandButton action="#{mBeanCliente.alterarCliente(cliente.codigo)}" value="Editar" />
+                </h:column>
+                <h:column>
+                    <h:commandButton action="#{mBeanCliente.excluirCliente(cliente.codigo)}" value="Excluir" />
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
